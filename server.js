@@ -14,7 +14,7 @@ app.get('/', function (req, res) {
 });
 
 const fileUploader = require('./routes/fileuploader')
-app.use('/api/fileanalyze', fileUploader)
+app.use('/api/fileanalyse', fileUploader)
 
 const port = process.env.PORT || 3000;
 app.listen(port, function () {
