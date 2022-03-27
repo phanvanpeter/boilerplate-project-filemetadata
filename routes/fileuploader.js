@@ -8,7 +8,12 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', upload.single('upfile'), (req, res) => {
-  res.json(req.file)
+  const file = req.file
+  res.json({
+    name: file.originalname,
+    type: file.mimetype,
+    size: file.size
+  })
 })
 
 module.exports = router
