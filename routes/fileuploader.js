@@ -6,4 +6,8 @@ router.get('/', (req, res) => {
   res.json({ message: 'Hey boy' })
 })
 
+router.post('/', (req, res) => {
+  res.json({})
+})
+
 module.exports = router
